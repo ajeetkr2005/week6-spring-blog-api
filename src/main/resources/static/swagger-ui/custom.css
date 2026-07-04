@@ -1,0 +1,16 @@
+.swagger-ui .info .title { color: #1f2937; }
+.swagger-ui .info .description { color: #4b5563; font-size: 14px; }
+.swagger-ui .topbar { display: none; }
+.swagger-ui .developer-badge {
+  position: fixed;
+  top: 12px;
+  left: 20px;
+  z-index: 2000;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}

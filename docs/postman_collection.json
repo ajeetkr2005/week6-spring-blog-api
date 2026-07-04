@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "Blog API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all categories",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/categories?page=0&size=10&sortBy=id&sortDir=asc"
+      }
+    },
+    {
+      "name": "Create category",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Technology\",\n  \"description\": \"Software and engineering\"\n}"
+        },
+        "url": "http://localhost:8080/api/categories"
+      }
+    },
+    {
+      "name": "Get all posts",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/posts?page=0&size=10&sortBy=createdAt&sortDir=desc"
+      }
+    },
+    {
+      "name": "Create post",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Spring Boot Tips\",\n  \"content\": \"Useful fundamentals for building APIs\",\n  \"author\": \"Jane\",\n  \"categoryId\": 1,\n  \"published\": true\n}"
+        },
+        "url": "http://localhost:8080/api/posts"
+      }
+    },
+    {
+      "name": "Get comments for a post",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/comments/post/1"
+      }
+    },
+    {
+      "name": "Create comment",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"content\": \"Excellent post\",\n  \"author\": \"Sam\",\n  \"postId\": 1\n}"
+        },
+        "url": "http://localhost:8080/api/comments"
+      }
+    }
+  ]
+}
